@@ -11,8 +11,11 @@ from app.crud.product import (
     create_product,
     update_product,
     delete_product,
+    get_categories,
 )
 from app.schemas.product import Product, ProductCreate
+from app.schemas.category import Category
+
 
 router = APIRouter(
     prefix="/products",
@@ -42,7 +45,12 @@ def read_products(
         limit=limit,
     )
 
-
+@router.get("/categories", response_model=List[Category])
+def read_categories(
+    db: Session = Depends(get_db),
+):
+    return get_categories(db)
+    
 @router.get("/slug/{slug}", response_model=Product)
 def read_product_by_slug(
     slug: str,

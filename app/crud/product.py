@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from app.models.product import Product
 from app.schemas.product import ProductCreate
-
+from sqlalchemy import func
 
 def get_products(
     db: Session,
@@ -100,3 +100,19 @@ def search_products(db: Session, query: str):
         .filter(Product.name.ilike(f"%{query}%"))
         .all()
     )
+
+def get_categories(db: Session):
+    results = (
+        db.query(Product.category, func.count(Product.id))
+        .group_by(Product.category)
+        .order_by(Product.category)
+        .all()
+    )
+
+    return [
+        {
+            "name": category,
+            "count": count,
+        }
+        for category, count in results
+    ]
