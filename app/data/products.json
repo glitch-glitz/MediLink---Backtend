@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "slug": "digital-blood-pressure-monitor",
+    "name": "Digital Blood Pressure Monitor",
+
+    "category": "Diagnostics",
+    "subcategory": "Blood Pressure Monitors",
+
+    "brand": "Omron",
+    "sku": "ML-DIAG-001",
+
+    "price": 3500,
+
+    "image": "/products/bp-monitor.jpg",
+
+    "images": [
+      "/products/bp-monitor.jpg",
+      "/products/bp-monitor-side.jpg",
+      "/products/bp-monitor-box.jpg"
+    ],
+
+    "inStock": true,
+    "featured": true,
+
+    "shortDescription":
+      "Automatic upper arm blood pressure monitor for home and clinical use.",
+
+    "description":
+      "A clinically accurate automatic blood pressure monitor suitable for hospitals, clinics, pharmacies and home healthcare. Features one-touch operation, irregular heartbeat detection and memory storage.",
+
+    "specifications": [
+      "Automatic inflation",
+      "LCD display",
+      "Stores up to 90 readings",
+      "Adult cuff included",
+      "2-year warranty"
+    ]
+  },
+
+  {
+    "id": 2,
+    "slug": "stethoscope",
+    "name": "Stethoscope",
+
+    "category": "Diagnostics",
+    "subcategory": "Examination",
+
+    "brand": "3M Littmann",
+    "sku": "ML-DIAG-002",
+
+    "price": 1800,
+
+    "image": "/products/stethoscope.jpg",
+
+    "images": [
+      "/products/stethoscope.jpg"
+    ],
+
+    "inStock": true,
+    "featured": true,
+
+    "shortDescription":
+      "Professional acoustic stethoscope for medical examinations.",
+
+    "description":
+      "High-quality dual-head stethoscope providing exceptional acoustic performance for physicians, nurses and healthcare professionals.",
+
+    "specifications": [
+      "Dual-head chest piece",
+      "Soft ear tips",
+      "Excellent acoustic sensitivity",
+      "Latex free"
+    ]
+  },
+
+  {
+    "id": 3,
+    "slug": "wheelchair",
+    "name": "Wheelchair",
+
+    "category": "Hospital Furniture",
+    "subcategory": "Mobility",
+
+    "brand": "MediLink",
+    "sku": "ML-HF-001",
+
+    "price": null,
+
+    "image": "/products/wheelchair.jpg",
+
+    "images": [
+      "/products/wheelchair.jpg"
+    ],
+
+    "inStock": true,
+    "featured": true,
+
+    "shortDescription":
+      "Durable manual wheelchair suitable for hospitals and home care.",
+
+    "description":
+      "Lightweight folding wheelchair with comfortable seating, strong steel frame and reliable braking system.",
+
+    "specifications": [
+      "Foldable frame",
+      "Steel construction",
+      "24-inch rear wheels",
+      "Weight capacity 120kg"
+    ]
+  },
+
+  {
+    "id": 4,
+    "slug": "hospital-bed",
+    "name": "Hospital Bed",
+
+    "category": "Hospital Furniture",
+    "subcategory": "Beds",
+
+    "brand": "MediLink",
+    "sku": "ML-HF-002",
+
+    "price": null,
+
+    "image": "/products/hospital-bed.jpg",
+
+    "images": [
+      "/products/hospital-bed.jpg"
+    ],
+
+    "inStock": true,
+    "featured": false,
+
+    "shortDescription":
+      "Adjustable hospital bed designed for patient comfort and clinical care.",
+
+    "description":
+      "Manual adjustable hospital bed with durable steel construction, side rails and easy crank adjustment for patient positioning.",
+
+    "specifications": [
+      "Adjustable backrest",
+      "Steel frame",
+      "Side rails included",
+      "Mattress optional"
+    ]
+  },
+  {
+  "id": 5,
+  "slug": "infrared-thermometer",
+  "name": "Infrared Thermometer",
+
+  "category": "Diagnostics",
+  "subcategory": "Thermometers",
+
+  "brand": "Omron",
+  "sku": "ML-DIAG-003",
+
+  "price": 2500,
+
+  "image": "/products/infrared-thermometer.jpg",
+
+  "images": [
+    "/products/infrared-thermometer.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Non-contact infrared thermometer for fast temperature measurement.",
+
+  "description":
+    "Provides accurate, contactless temperature readings within seconds, suitable for hospitals, clinics and home use.",
+
+  "specifications": [
+    "Non-contact",
+    "LCD display",
+    "Fever alarm",
+    "Memory function"
+  ]
+},
+
+{
+  "id": 6,
+  "slug": "pulse-oximeter",
+  "name": "Pulse Oximeter",
+
+  "category": "Diagnostics",
+  "subcategory": "Monitoring",
+
+  "brand": "ChoiceMMed",
+  "sku": "ML-DIAG-004",
+
+  "price": 2200,
+
+  "image": "/products/pulse-oximeter.jpg",
+
+  "images": [
+    "/products/pulse-oximeter.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Finger pulse oximeter for measuring oxygen saturation and pulse rate.",
+
+  "description":
+    "Portable pulse oximeter with bright OLED display, ideal for hospitals, clinics and home monitoring.",
+
+  "specifications": [
+    "OLED screen",
+    "SpO2 monitoring",
+    "Pulse rate display",
+    "Auto power off"
+  ]
+},
+
+{
+  "id": 7,
+  "slug": "glucometer-kit",
+  "name": "Glucometer Kit",
+
+  "category": "Diagnostics",
+  "subcategory": "Diabetes Care",
+
+  "brand": "Accu-Chek",
+  "sku": "ML-DIAG-005",
+
+  "price": 3200,
+
+  "image": "/products/glucometer.jpg",
+
+  "images": [
+    "/products/glucometer.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Complete blood glucose monitoring kit.",
+
+  "description":
+    "Easy-to-use glucometer supplied with lancets, strips and carrying case for accurate blood sugar monitoring.",
+
+  "specifications": [
+    "Fast results",
+    "Test strips included",
+    "Memory storage",
+    "Carrying case"
+  ]
+},
+
+{
+  "id": 8,
+  "slug": "examination-couch",
+  "name": "Examination Couch",
+
+  "category": "Hospital Furniture",
+  "subcategory": "Examination Beds",
+
+  "brand": "MediLink",
+  "sku": "ML-HF-003",
+
+  "price": null,
+
+  "image": "/products/examination-couch.jpg",
+
+  "images": [
+    "/products/examination-couch.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Comfortable examination couch for clinics and hospitals.",
+
+  "description":
+    "Heavy-duty examination couch with padded mattress and strong steel frame for daily clinical use.",
+
+  "specifications": [
+    "Steel frame",
+    "Foam mattress",
+    "Easy to clean",
+    "150kg capacity"
+  ]
+},
+
+{
+  "id": 9,
+  "slug": "oxygen-cylinder",
+  "name": "Medical Oxygen Cylinder",
+
+  "category": "Hospital Equipment",
+  "subcategory": "Oxygen Therapy",
+
+  "brand": "MediLink",
+  "sku": "ML-HE-001",
+
+  "price": null,
+
+  "image": "/products/oxygen-cylinder.jpg",
+
+  "images": [
+    "/products/oxygen-cylinder.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Medical oxygen cylinder for hospitals and emergency response.",
+
+  "description":
+    "High-quality refillable oxygen cylinder designed for safe oxygen therapy in healthcare facilities.",
+
+  "specifications": [
+    "Steel construction",
+    "Refillable",
+    "Pressure tested",
+    "Available in multiple sizes"
+  ]
+},
+
+{
+  "id": 10,
+  "slug": "surgical-gloves",
+  "name": "Sterile Surgical Gloves",
+
+  "category": "PPE",
+  "subcategory": "Gloves",
+
+  "brand": "Top Glove",
+  "sku": "ML-PPE-001",
+
+  "price": 1800,
+
+  "image": "/products/surgical-gloves.jpg",
+
+  "images": [
+    "/products/surgical-gloves.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Sterile latex surgical gloves for medical procedures.",
+
+  "description":
+    "Powder-free sterile surgical gloves providing comfort, flexibility and excellent protection.",
+
+  "specifications": [
+    "Latex",
+    "Sterile",
+    "Powder free",
+    "Box of 100"
+  ]
+},
+
+{
+  "id": 11,
+  "slug": "face-mask",
+  "name": "3-Ply Surgical Face Mask",
+
+  "category": "PPE",
+  "subcategory": "Masks",
+
+  "brand": "MediLink",
+  "sku": "ML-PPE-002",
+
+  "price": 600,
+
+  "image": "/products/face-mask.jpg",
+
+  "images": [
+    "/products/face-mask.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Disposable 3-ply surgical face masks.",
+
+  "description":
+    "Comfortable disposable surgical masks offering high filtration efficiency for healthcare environments.",
+
+  "specifications": [
+    "3-layer protection",
+    "Disposable",
+    "Elastic ear loops",
+    "Box of 50"
+  ]
+},
+
+{
+  "id": 12,
+  "slug": "crutches",
+  "name": "Aluminium Crutches",
+
+  "category": "Rehabilitation",
+  "subcategory": "Mobility Aids",
+
+  "brand": "MediLink",
+  "sku": "ML-REH-001",
+
+  "price": 4500,
+
+  "image": "/products/crutches.jpg",
+
+  "images": [
+    "/products/crutches.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Height-adjustable aluminium crutches.",
+
+  "description":
+    "Lightweight walking crutches with comfortable hand grips and anti-slip rubber tips.",
+
+  "specifications": [
+    "Height adjustable",
+    "Aluminium frame",
+    "Rubber tips",
+    "Lightweight"
+  ]
+  },
+{
+  "id": 13,
+  "slug": "walking-stick",
+  "name": "Walking Stick",
+
+  "category": "Rehabilitation",
+  "subcategory": "Mobility Aids",
+
+  "brand": "MediLink",
+  "sku": "ML-REH-002",
+
+  "price": 1800,
+
+  "image": "/products/walking-stick.jpg",
+
+  "images": [
+    "/products/walking-stick.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Adjustable aluminium walking stick.",
+
+  "description":
+    "Comfortable lightweight walking stick with ergonomic handle and anti-slip rubber base.",
+
+  "specifications": [
+    "Height adjustable",
+    "Lightweight aluminium",
+    "Rubber tip",
+    "Comfort grip"
+  ]
+},
+
+{
+  "id": 14,
+  "slug": "oxygen-cylinder-100",
+  "name": "Oxygen Cylinder-100",
+
+  "category": "Medical Equipment",
+  "subcategory": "Respiratory Care",
+
+  "brand": "MediLink",
+  "sku": "ML-ME-001",
+
+  "price": null,
+
+  "image": "/products/oxygen-cylinder-100.jpg",
+
+  "images": [
+    "/products/oxygen-cylinder-100.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Portable medical oxygen cylinder for healthcare facilities.",
+
+  "description":
+    "High-quality oxygen cylinder suitable for hospitals, ambulances and emergency response.",
+
+  "specifications": [
+    "Steel cylinder",
+    "Medical grade",
+    "Portable",
+    "Pressure tested"
+  ]
+},
+
+{
+  "id": 15,
+  "slug": "oxygen-concentrator",
+  "name": "Oxygen Concentrator",
+
+  "category": "Medical Equipment",
+  "subcategory": "Respiratory Care",
+
+  "brand": "Yuwell",
+  "sku": "ML-ME-002",
+
+  "price": null,
+
+  "image": "/products/oxygen-concentrator.jpg",
+
+  "images": [
+    "/products/oxygen-concentrator.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Continuous oxygen supply for home and hospital use.",
+
+  "description":
+    "Reliable oxygen concentrator with low-noise operation and adjustable oxygen flow.",
+
+  "specifications": [
+    "5L oxygen output",
+    "Low noise",
+    "Energy efficient",
+    "Digital display"
+  ]
+},
+
+{
+  "id": 16,
+  "slug": "nebulizer",
+  "name": "Nebulizer Machine",
+
+  "category": "Medical Equipment",
+  "subcategory": "Respiratory Care",
+
+  "brand": "Omron",
+  "sku": "ML-ME-003",
+
+  "price": 6500,
+
+  "image": "/products/nebulizer.jpg",
+
+  "images": [
+    "/products/nebulizer.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Compressor nebulizer for effective respiratory treatment.",
+
+  "description":
+    "Compact nebulizer designed for fast and efficient medication delivery.",
+
+  "specifications": [
+    "Low noise",
+    "Compact",
+    "Adult & child masks",
+    "Easy to clean"
+  ]
+},
+
+{
+  "id": 17,
+  "slug": "suction-machine",
+  "name": "Portable Suction Machine",
+
+  "category": "Medical Equipment",
+  "subcategory": "Emergency Equipment",
+
+  "brand": "MediLink",
+  "sku": "ML-ME-004",
+
+  "price": null,
+
+  "image": "/products/suction-machine.jpg",
+
+  "images": [
+    "/products/suction-machine.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Portable medical suction unit.",
+
+  "description":
+    "Reliable suction machine for hospitals, clinics and emergency medical services.",
+
+  "specifications": [
+    "Portable",
+    "Low noise",
+    "Powerful suction",
+    "Easy maintenance"
+  ]
+},
+
+{
+  "id": 18,
+  "slug": "infrared-thermometer pro",
+  "name": "Infrared Thermometer pro",
+
+  "category": "Diagnostics",
+  "subcategory": "Thermometers",
+
+  "brand": "Omron",
+  "sku": "ML-DIAG-006",
+
+  "price": 2800,
+
+  "image": "/products/infrared-thermometer-pro.jpg",
+
+  "images": [
+    "/products/infrared-thermometer-pro.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Non-contact infrared thermometer.",
+
+  "description":
+    "Fast and accurate forehead thermometer suitable for hospitals and home use.",
+
+  "specifications": [
+    "1-second reading",
+    "LCD display",
+    "Fever alarm",
+    "Memory function"
+  ]
+},
+
+{
+  "id": 19,
+  "slug": "digital-weighing-scale",
+  "name": "Digital Weighing Scale",
+
+  "category": "Diagnostics",
+  "subcategory": "Patient Monitoring",
+
+  "brand": "Camry",
+  "sku": "ML-DIAG-007",
+
+  "price": 3500,
+
+  "image": "/products/weighing-scale.jpg",
+
+  "images": [
+    "/products/weighing-scale.jpg"
+  ],
+
+  "inStock": true,
+  "featured": false,
+
+  "shortDescription":
+    "Digital body weighing scale.",
+
+  "description":
+    "Accurate digital weighing scale with tempered glass platform and LCD display.",
+
+  "specifications": [
+    "180kg capacity",
+    "LCD screen",
+    "Auto shut-off",
+    "Tempered glass"
+  ]
+},
+
+{
+  "id": 20,
+  "slug": "glucometer",
+  "name": "Blood Glucose Meter",
+
+  "category": "Diagnostics",
+  "subcategory": "Diabetes Care",
+
+  "brand": "Accu-Chek",
+  "sku": "ML-DIAG-008",
+
+  "price": 4500,
+
+  "image": "/products/glucometer.jpg",
+
+  "images": [
+    "/products/glucometer.jpg"
+  ],
+
+  "inStock": true,
+  "featured": true,
+
+  "shortDescription":
+    "Portable blood sugar testing kit.",
+
+  "description":
+    "Accurate glucometer with quick results for diabetes management.",
+
+  "specifications": [
+    "5-second results",
+    "Memory storage",
+    "Test strips included",
+    "Compact design"
+  ]
+}
+]
