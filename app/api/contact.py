@@ -22,3 +22,4 @@ def submit_contact(
         success=True,
         message="Your message has been received."
     )
+    
