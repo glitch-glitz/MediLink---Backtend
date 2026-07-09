@@ -51,3 +51,6 @@ def delete_product(db: Session, product_id: int):
     db.commit()
 
     return db_product
+
+def get_product_by_slug(db: Session, slug: str):
+    return db.query(Product).filter(Product.slug == slug).first()

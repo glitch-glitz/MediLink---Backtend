@@ -12,7 +12,11 @@ from app.crud.product import (
     update_product,
 )
 from app.schemas.product import Product, ProductCreate
-
+from app.crud.product import (
+    create_product,
+    get_products,
+    get_product_by_slug,
+)
 router = APIRouter(
     prefix="/products",
     tags=["Products"],
@@ -67,3 +71,7 @@ def remove_product(
         raise HTTPException(status_code=404, detail="Product not found")
 
     return {"message": "Product deleted successfully"}
+
+@router.get("/{slug}", response_model=Product)
+def read_product(slug: str, db: Session = Depends(get_db)):
+    return get_product_by_slug(db, slug)
