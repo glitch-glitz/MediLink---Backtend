@@ -25,13 +25,21 @@ def read_products(
     category: str = None,
     featured: bool = None,
     in_stock: bool = None,
+    search: str = None,
+    sort: str = None,
+    skip: int = 0,
+    limit: int = 12,
     db: Session = Depends(get_db),
 ):
     return get_products(
-        db,
+        db=db,
         category=category,
         featured=featured,
         in_stock=in_stock,
+        search=search,
+        sort=sort,
+        skip=skip,
+        limit=limit,
     )
 
 

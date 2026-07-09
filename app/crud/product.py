@@ -9,6 +9,10 @@ def get_products(
     category: str = None,
     featured: bool = None,
     in_stock: bool = None,
+    search: str = None,
+    sort: str = None,
+    skip: int = 0,
+    limit: int = 12,
 ):
     query = db.query(Product)
 
@@ -21,7 +25,17 @@ def get_products(
     if in_stock is not None:
         query = query.filter(Product.in_stock == in_stock)
 
-    return query.all()
+    if search:
+        query = query.filter(Product.name.ilike(f"%{search}%"))
+
+    if sort == "price_asc":
+        query = query.order_by(Product.price.asc())
+    elif sort == "price_desc":
+        query = query.order_by(Product.price.desc())
+    elif sort == "name":
+        query = query.order_by(Product.name.asc())
+
+    return query.offset(skip).limit(limit).all()
 
 
 def get_product(db: Session, product_id: int):
@@ -51,32 +65,17 @@ def create_product(db: Session, product: ProductCreate):
     db.add(db_product)
     db.commit()
     db.refresh(db_product)
-
     return db_product
 
 
-def update_product(
-    db: Session,
-    product_id: int,
-    product: ProductCreate,
-):
+def update_product(db: Session, product_id: int, product: ProductCreate):
     db_product = get_product(db, product_id)
 
     if not db_product:
         return None
 
-    db_product.name = product.name
-    db_product.slug = product.slug
-    db_product.category = product.category
-    db_product.subcategory = product.subcategory
-    db_product.brand = product.brand
-    db_product.sku = product.sku
-    db_product.price = product.price
-    db_product.image = product.image
-    db_product.short_description = product.short_description
-    db_product.description = product.description
-    db_product.in_stock = product.in_stock
-    db_product.featured = product.featured
+    for key, value in product.model_dump().items():
+        setattr(db_product, key, value)
 
     db.commit()
     db.refresh(db_product)
