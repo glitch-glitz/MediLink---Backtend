@@ -24,8 +24,18 @@ router = APIRouter(
 
 
 @router.get("/", response_model=List[Product])
-def read_products(db: Session = Depends(get_db)):
-    return get_products(db)
+def read_products(
+    category: str = None,
+    featured: bool = None,
+    in_stock: bool = None,
+    db: Session = Depends(get_db),
+):
+    return get_products(
+        db,
+        category=category,
+        featured=featured,
+        in_stock=in_stock,
+    )
 
 
 @router.get("/{product_id}", response_model=Product)
