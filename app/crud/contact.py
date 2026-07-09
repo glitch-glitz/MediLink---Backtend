@@ -17,3 +17,11 @@ def create_contact(db: Session, contact: ContactCreate):
     db.refresh(db_contact)
 
     return db_contact
+
+
+def get_contacts(db: Session):
+    return (
+        db.query(Contact)
+        .order_by(Contact.id.desc())
+        .all()
+    )
