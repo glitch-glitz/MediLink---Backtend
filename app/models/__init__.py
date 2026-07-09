@@ -1,1 +1,2 @@
-from .product import Product
+from app.models.product import Product
+from app.models.contact import Contact
