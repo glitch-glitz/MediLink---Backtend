@@ -93,3 +93,10 @@ def delete_product(db: Session, product_id: int):
     db.commit()
 
     return db_product
+
+def search_products(db: Session, query: str):
+    return (
+        db.query(Product)
+        .filter(Product.name.ilike(f"%{query}%"))
+        .all()
+    )

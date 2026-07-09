@@ -43,12 +43,12 @@ def read_products(
     )
 
 
-@router.get("/{product_id}", response_model=Product)
-def read_product(
-    product_id: int,
+@router.get("/slug/{slug}", response_model=Product)
+def read_product_by_slug(
+    slug: str,
     db: Session = Depends(get_db),
 ):
-    product = get_product(db, product_id)
+    product = get_product_by_slug(db, slug)
 
     if not product:
         raise HTTPException(status_code=404, detail="Product not found")
@@ -56,12 +56,12 @@ def read_product(
     return product
 
 
-@router.get("/slug/{slug}", response_model=Product)
-def read_product_by_slug(
-    slug: str,
+@router.get("/{product_id}", response_model=Product)
+def read_product(
+    product_id: int,
     db: Session = Depends(get_db),
 ):
-    product = get_product_by_slug(db, slug)
+    product = get_product(db, product_id)
 
     if not product:
         raise HTTPException(status_code=404, detail="Product not found")
