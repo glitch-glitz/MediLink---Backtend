@@ -9,20 +9,20 @@ class Product(Base):
     id = Column(Integer, primary_key=True, index=True)
 
     name = Column(String(255), nullable=False)
-    slug = Column(String(255), unique=True, nullable=False, index=True)
+    slug = Column(String(255), unique=True, index=True)
 
-    category = Column(String(120), nullable=False)
-    subcategory = Column(String(120))
+    category = Column(String(100), nullable=False)
+    subcategory = Column(String(100))
 
-    brand = Column(String(120))
+    brand = Column(String(100))
     sku = Column(String(100), unique=True)
 
     price = Column(Float)
 
     image = Column(String(500))
 
-    description = Column(Text)
     short_description = Column(Text)
+    description = Column(Text)
 
     in_stock = Column(Boolean, default=True)
     featured = Column(Boolean, default=False)
