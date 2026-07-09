@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 
 from app.models.product import Product
+from app.schemas.product import ProductCreate
 
 
 def get_products(db: Session):
@@ -15,8 +16,11 @@ def get_product(db: Session, product_id: int):
     )
 
 
-def create_product(db: Session, product: Product):
-    db.add(product)
+def create_product(db: Session, product: ProductCreate):
+    db_product = Product(**product.model_dump())
+
+    db.add(db_product)
     db.commit()
-    db.refresh(product)
-    return product
+    db.refresh(db_product)
+
+    return db_product
