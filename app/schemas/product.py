@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -5,13 +6,15 @@ class ProductBase(BaseModel):
     name: str
     slug: str
     category: str
-    subcategory: str | None = None
-    brand: str | None = None
-    sku: str | None = None
-    price: float | None = None
-    image: str | None = None
-    short_description: str | None = None
-    description: str | None = None
+
+    subcategory: Optional[str] = None
+    brand: Optional[str] = None
+    sku: Optional[str] = None
+    price: Optional[float] = None
+    image: Optional[str] = None
+    short_description: Optional[str] = None
+    description: Optional[str] = None
+
     in_stock: bool = True
     featured: bool = False
 
