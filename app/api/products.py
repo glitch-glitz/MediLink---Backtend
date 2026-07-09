@@ -5,18 +5,15 @@ from sqlalchemy.orm import Session
 
 from app.dependencies import get_db
 from app.crud.product import (
-    create_product,
-    delete_product,
-    get_product,
     get_products,
+    get_product,
+    get_product_by_slug,
+    create_product,
     update_product,
+    delete_product,
 )
 from app.schemas.product import Product, ProductCreate
-from app.crud.product import (
-    create_product,
-    get_products,
-    get_product_by_slug,
-)
+
 router = APIRouter(
     prefix="/products",
     tags=["Products"],
@@ -39,8 +36,24 @@ def read_products(
 
 
 @router.get("/{product_id}", response_model=Product)
-def read_product(product_id: int, db: Session = Depends(get_db)):
+def read_product(
+    product_id: int,
+    db: Session = Depends(get_db),
+):
     product = get_product(db, product_id)
+
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    return product
+
+
+@router.get("/slug/{slug}", response_model=Product)
+def read_product_by_slug(
+    slug: str,
+    db: Session = Depends(get_db),
+):
+    product = get_product_by_slug(db, slug)
 
     if not product:
         raise HTTPException(status_code=404, detail="Product not found")
@@ -81,7 +94,3 @@ def remove_product(
         raise HTTPException(status_code=404, detail="Product not found")
 
     return {"message": "Product deleted successfully"}
-
-@router.get("/{slug}", response_model=Product)
-def read_product(slug: str, db: Session = Depends(get_db)):
-    return get_product_by_slug(db, slug)
