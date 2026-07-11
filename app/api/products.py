@@ -1,3 +1,5 @@
+from app.dependencies import get_db, get_current_admin
+
 from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -81,6 +83,7 @@ def read_product(
 def add_product(
     product: ProductCreate,
     db: Session = Depends(get_db),
+    current_user=Depends(get_current_admin),
 ):
     return create_product(db, product)
 
@@ -90,23 +93,32 @@ def edit_product(
     product_id: int,
     product: ProductCreate,
     db: Session = Depends(get_db),
+    current_user=Depends(get_current_admin),
 ):
     updated = update_product(db, product_id, product)
 
     if not updated:
-        raise HTTPException(status_code=404, detail="Product not found")
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
 
     return updated
-
 
 @router.delete("/{product_id}")
 def remove_product(
     product_id: int,
     db: Session = Depends(get_db),
+    current_user=Depends(get_current_admin),
 ):
     deleted = delete_product(db, product_id)
 
     if not deleted:
-        raise HTTPException(status_code=404, detail="Product not found")
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
 
-    return {"message": "Product deleted successfully"}
+    return {
+        "message": "Product deleted successfully"
+    }

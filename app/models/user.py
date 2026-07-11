@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, Integer, String
-
+from sqlalchemy.orm import relationship
 from app.database import Base
 
 
@@ -15,3 +15,5 @@ class User(Base):
     hashed_password = Column(String(255), nullable=False)
 
     is_admin = Column(Boolean, default=False)
+    orders = relationship("Order", back_populates="user",
+)

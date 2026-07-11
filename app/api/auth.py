@@ -13,7 +13,7 @@ from app.schemas.auth import (
     Token,
 )
 from app.core.security import create_access_token
-from app.core.dependencies import get_current_user
+from app.dependencies import get_current_user
 from app.models.user import User
 
 

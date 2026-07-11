@@ -1,8 +1,10 @@
+
 from datetime import datetime, timedelta
+
 from jose import jwt
 from passlib.context import CryptContext
 
-SECRET_KEY = "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET"
+SECRET_KEY = "your-super-secret-key-change-this"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
 
@@ -12,12 +14,18 @@ pwd_context = CryptContext(
 )
 
 
-def hash_password(password: str):
+def get_password_hash(password: str):
     return pwd_context.hash(password)
 
 
-def verify_password(plain, hashed):
-    return pwd_context.verify(plain, hashed)
+def verify_password(
+    plain_password: str,
+    hashed_password: str,
+):
+    return pwd_context.verify(
+        plain_password,
+        hashed_password,
+    )
 
 
 def create_access_token(data: dict):
