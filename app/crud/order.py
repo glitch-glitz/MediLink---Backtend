@@ -61,3 +61,32 @@ def get_my_orders(
         .order_by(Order.id.desc())
         .all()
     )
+
+def get_all_orders(db: Session):
+    return (
+        db.query(Order)
+        .order_by(Order.id.desc())
+        .all()
+    )
+
+
+def update_order_status(
+    db: Session,
+    order_id: int,
+    status: str,
+):
+    order = (
+        db.query(Order)
+        .filter(Order.id == order_id)
+        .first()
+    )
+
+    if not order:
+        return None
+
+    order.status = status
+
+    db.commit()
+    db.refresh(order)
+
+    return order
